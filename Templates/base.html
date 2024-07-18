@@ -1,0 +1,19 @@
+{% html5 %} <!-- HTML header with browser directives -->
+<head>
+	{% snippet 'shared/general/head' %}
+	{{ 'custom_css' | asset_url: 'css' | stylesheet_tag: media: 'screen' }}
+</head>
+{% body %} <!-- Body with automatic context classes -->
+{% snippet 'shared/general/body_tag_manager' %}
+<div id="modyo-site-alert-wrapper"></div>
+{% snippet 'shared/general/header' %} 
+<main class="container" id="content">
+	<div id="breadcrumb" class="mt-8">
+		{{ site.breadcrumb }}
+	</div>
+	{{ content_for_layout }}
+</main>
+<script nonce="{{csp_nonce}}">{% snippet "shared/service_worker/register_js" %}</script>
+{% snippet 'shared/general/footer' %}
+{% endbody %}
+{% endhtml5 %}

@@ -1,0 +1,39 @@
+:root {
+	 
+    /* Vars*/
+       --df-background-dark-color: #ccccd2;
+                --df-background-dark-color-rgb: 204, 204, 210;
+    
+                --df-background-bright-color:#ffffff;
+                --df-background-contrast-color-rbg:233,120,10;
+                --df-background-contrast-color: #e9780a;
+       
+    
+       --df-font-family: monospace;
+                
+                
+    
+    
+    
+    
+    /* Bootstrap Override */
+            --bs-body-font-family: var(--df-font-family);
+            --bs-btn-secondary-bg: var(--df-background-contrast-color);
+    
+            --bs-secondary-rgb: var(--df-background-contrast-color-rbg);
+            --bs-secondary-700-rgb: var(--df-background-contrast-color-rbg);
+    
+            --bs-body-bg-rgb: var(--df-background-dark-color-rgb);
+            --bs-dark-rgb: var(--df-background-dark-color-rgb);
+            
+            --bs-btn-secondary-color: var(--df-background-bright-color);
+    
+}
+
+
+#df-featured .card{
+   background-color: var(--df-background-bright-color);
+}
+
+   /* Apply custom styles to Hero component element */
+   
